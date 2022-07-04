@@ -1,0 +1,143 @@
+const content = [
+    {
+          quote: "Evernote is a powerful tool that can help executives, entrepreneurs and creative people capture and arrange their ideas. All you have to do is use it.",
+  
+          quoteTitle: "— Forbes",
+  
+  },
+  {
+      quote: "Evernote is a powerful tool for managing your tasks right alongside all of the information you work with every day.",
+      
+      quoteTitle: "— Inc. Magazine",
+  },
+  {
+      quote: "It feels like there are endless ways to use Evernote… Use it for school, work, life, and beyond.",
+      quoteTitle: "— The Verge",
+  },
+  {
+      quote: "A few years ago, after my computer broke down and I lost all of the notes I had saved to my desktop, I finally decided to embrace the cloud and download Evernote. Since then, I havent looked back.",
+      quoteTitle: "— Entrepreneur Magazine",
+  },
+  {
+      quote: "You can even send emails to Evernote and gather all of the things you need in a single place.",
+      quoteTitle: "— Business.com",
+  },
+  {
+      quote: "Consider Evernote to be your go-to hub for not just to-do lists but all of your notes. The organizational possib",
+      quoteTitle: "— Well + Good",
+  }
+ ]
+ 
+
+
+let testQuote= document.getElementById("testQuote")
+let testQuoteLogo= document.getElementById("testQuoteLogo")
+//declaring image events
+let logo0 = document.getElementById("logo0")
+let logo1 = document.getElementById("logo1")
+let logo2 = document.getElementById("logo2")
+let logo3 = document.getElementById("logo3")
+let logo4 = document.getElementById("logo4")
+let logo5 = document.getElementById("logo5")
+
+logo0.addEventListener("click", function () {
+    testQuote.innerText = content[0].quote;
+    testQuoteLogo.innerText = content[0].quoteTitle;
+
+})
+
+logo1.addEventListener("click", function () {
+    testQuote.innerText = content[1].quote;
+    testQuoteLogo.innerText = content[1].quoteTitle;
+
+})
+
+logo2.addEventListener("click", function () {
+    testQuote.innerText = content[2].quote;
+    testQuoteLogo.innerText = content[2].quoteTitle;
+
+})
+
+logo3.addEventListener("click", function () {
+    testQuote.innerText = content[3].quote;
+    testQuoteLogo.innerText = content[3].quoteTitle;
+
+})
+
+logo4.addEventListener("click", function () {
+    testQuote.innerText = content[4].quote;
+    testQuoteLogo.innerText = content[4].quoteTitle;
+
+})
+
+logo5.addEventListener("click", function () {
+    testQuote.innerText = content[5].quote;
+    testQuoteLogo.innerText = content[5].quoteTitle;
+
+})
+
+
+count = 0;
+wordsArray = [
+    'Evernote is a powerful tool that can help executives, entrepreneurs and creative people capture and arrange their ideas. All you have to do is use it.',
+    'Evernote is a powerful tool for managing your tasks right alongside all of the information you work with every day.',
+    'It feels like there are endless ways to use Evernote… Use it for school, work, life, and beyond.',
+    'A few years ago, after my computer broke down and I lost all of the notes I had saved to my desktop, I finally decided to embrace the cloud and download Evernote. Since then, I havent looked back.',
+    'You can even send emails to Evernote and gather all of the things you need in a single place.',
+    'Consider Evernote to be your go-to hub for not just to-do lists but all of your notes. The organizational possibilities are expansive, and everything syncs across all of your devices that have the app enabled, so you’ll never miss a beat.'
+];
+setInterval(function () {
+    count++;
+    $("#testQuote").fadeOut(300, function() {
+        $(this).html(wordsArray[count % wordsArray.length]).fadeIn(500);
+    });
+}, 5000);
+
+
+count1 = 0;
+wordsArray1 = [
+    '— Forbes', '— Inc. Magazine', '— The Verge', '— Entrepreneur Magazine','— Business.com', '— Well + Good'
+];
+
+setInterval(function () {
+    count1++;
+    $("#testQuoteLogo").fadeOut(300, function() {
+        $(this).html(wordsArray1[count1 % wordsArray1.length]).fadeIn(500);
+    });
+}, 5000);
+
+
+
+
+
+//this is the navbar JAVASCRIPT pls
+const hamburger = document.querySelector('.hamburger')
+const drawerNav = document.querySelector('.drawer-nav')
+hamburger.addEventListener('click', () => {
+drawerNav.classList.toggle('active')
+})
+const mobileFeature = document.getElementById('mobile-feature')
+const mobilePlan = document.getElementById('mobile-plan')
+const mobileFeatureList = document.querySelector('.mobile-feature-dropdownmenu-list')
+const mobilePlanList = document.querySelector('.mobile-plans-dropdown-list')
+mobileFeature.addEventListener('click', ()=>{
+mobileFeatureList.classList.toggle('active')
+})
+mobilePlan.addEventListener('click', ()=>{
+mobilePlanList.classList.toggle('active')
+})
+
+//just adding content
+
+const menubtn = document.querySelector('.menu-btn')
+let menuOpen = false;
+menubtn.addEventListener('click', ()=>{
+    if(!menuOpen){
+        menubtn.classList.add('open');
+        menuOpen = true;
+    }
+    else {
+        menubtn.classList.remove('open');
+        menuOpen = false;
+    }
+})
