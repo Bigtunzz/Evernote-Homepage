@@ -23,7 +23,7 @@ const content = [
       quoteTitle: "— Business.com",
   },
   {
-      quote: "Consider Evernote to be your go-to hub for not just to-do lists but all of your notes. The organizational possib",
+      quote: "Consider Evernote to be your go-to hub for not just to-do lists but all of your notes. The organizational possibilities are expansive.",
       quoteTitle: "— Well + Good",
   }
  ]
@@ -84,7 +84,7 @@ wordsArray = [
     'It feels like there are endless ways to use Evernote… Use it for school, work, life, and beyond.',
     'A few years ago, after my computer broke down and I lost all of the notes I had saved to my desktop, I finally decided to embrace the cloud and download Evernote. Since then, I havent looked back.',
     'You can even send emails to Evernote and gather all of the things you need in a single place.',
-    'Consider Evernote to be your go-to hub for not just to-do lists but all of your notes. The organizational possibilities are expansive, and everything syncs across all of your devices that have the app enabled, so you’ll never miss a beat.'
+    'Consider Evernote to be your go-to hub for not just to-do lists but all of your notes. The organizational possibilities are expansive. '
 ];
 setInterval(function () {
     count++;
@@ -141,3 +141,50 @@ menubtn.addEventListener('click', ()=>{
         menuOpen = false;
     }
 })
+
+/// aside function
+let aside = [
+    {
+        head: 'work anywhere',
+        subHead: 'Keep important info handy- your notessync automatically to all your devices.'
+    },
+    {
+        head: 'remember everything',
+        subHead: 'Make notes more useful by adding text, images, audio, scan, PDFs, and documents.'
+    },
+    {
+        head: 'TURN TO-DO INTO DONE',
+        subHead: 'Bring your notes, tasks, and schedules together to get things done more easily.'
+    },
+    {
+        head: 'find things fast',
+        subHead: 'Get what you need, when you need it with powerful, flexible search capabilities.'
+    }
+]
+let asideHead = document.querySelector('.aside-1-list-head')
+let asideSubHead = document.querySelector('.aside-1-list-sub-head')
+
+asideHead.textContent = `${aside[0].head}`
+asideSubHead.textContent = `${aside[0].subHead}`
+let index = 0;
+// slider.src = `${data.results[0].urls.regular}` ;
+
+setInterval(() => {
+    index++
+    if( index >= aside.length-1){
+        index = 0;
+    }
+    asideHead.textContent = `${aside[index].head}`
+    asideSubHead.textContent = `${aside[index].subHead}`
+    
+}, 3000);
+// nextBbtn.addEventListener("click", () => {
+
+//     index++;
+//     if(index >= data.results.length-1) {
+//         index = 0;
+//     }
+    
+//     slider.src = `${data.results[index].urls.regular}` ;
+
+//   })
