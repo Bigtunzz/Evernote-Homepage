@@ -178,6 +178,21 @@ setInterval(() => {
     asideSubHead.textContent = `${aside[index].subHead}`
     
 }, 3000);
+let freeExpandBtn = document.querySelector('.feature-expand1')
+let out1 = document.querySelector('.out1')
+freeExpandBtn.addEventListener('click', () =>{
+    out1.classList.toggle('active')
+})
+let personalExpandBtn = document.querySelector('.feature-expand2')
+let out2 = document.querySelector('.out2')
+personalExpandBtn.addEventListener('click', () =>{
+    out2.classList.toggle('active')
+})
+let professionalExpandBtn = document.querySelector('.feature-expand3')
+let out3 = document.querySelector('.out3')
+professionalExpandBtn.addEventListener('click', () =>{
+    out3.classList.toggle('active')
+})
 // nextBbtn.addEventListener("click", () => {
 
 //     index++;
